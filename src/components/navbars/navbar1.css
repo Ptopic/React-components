@@ -6,7 +6,7 @@ body {
     background: #3b3d43;
 }
 
-a {
+button {
     border: 0;
     padding: 0;
     font-family: inherit;
@@ -51,8 +51,6 @@ body.open .navbar-overlay {
 
 .navbar-burger {
     position: absolute;
-    background: none;
-    border: none;
     top: 0;
     left: 0;
     display: grid;
@@ -62,22 +60,6 @@ body.open .navbar-overlay {
     padding: 0;
 }
 
-.navbar-burger-close {
-    position: absolute;
-    background: none;
-    border: none;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-}
-
-.navbar-burger-icon {
-    color: white;
-}
-
 .navbar-title {
     margin: 0;
     font-size: 16px;
@@ -85,13 +67,13 @@ body.open .navbar-overlay {
 
 .navbar-menu {
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     top: 0;
     left: 0;
     translate: -100% 0;
     width: 270px;
     height: 100%;
-    padding: 90px 20px;
+    padding: 20px;
     display: flex;
     gap: 40px;
     flex-direction: column;
@@ -101,37 +83,17 @@ body.open .navbar-overlay {
     transition: translate 0.3s;
 }
 
+.navbar-burger-icon-closed {
+    display: none;
+    visibility: hidden;
+}
+
 body.open .navbar-menu {
     translate: 0 0;
     visibility: visible;
 }
 
-
-
-.navbar-menu>a {
-    color: rgba(255, 255, 255, 0.5);
-    background: transparent;
-    padding: 0 8px;
-}
-
-.navbar-menu>a.active {
-    color: inherit;
-}
-
 @media only screen and (min-width: 600px) {
-    .navbar {
-        justify-content: space-between;
-        padding: 0 0 0 16px;
-    }
-
-    .navbar-overlay {
-        display: none;
-    }
-
-    .navbar-burger {
-        display: none;
-    }
-
     .navbar-menu {
         position: static;
         translate: 0 0;
@@ -140,4 +102,31 @@ body.open .navbar-menu {
         flex-direction: row;
         visibility: visible;
     }
+
+    .navbar-burger-icon-closed {
+        visibility: visible;
+    }
+
+    .navbar-burger {
+        display: none;
+    }
+
+    .navbar-overlay {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0 0 0 16px;
+    }
+}
+
+.navbar-menu>button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+}
+
+.navbar-menu>button.active {
+    color: inherit;
 }

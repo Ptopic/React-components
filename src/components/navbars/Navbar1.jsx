@@ -17,26 +17,25 @@ function Navbar1() {
 					color="white"
 					fontSize="large"
 				></MenuIcon>
+				{/* <CloseIcon
+					className="navbar-burger-icon-closed"
+					color="white"
+					fontSize="large"
+				></CloseIcon> */}
 			</button>
-			<h1 class="navbar-title">Awards</h1>
+			<h1 class="navbar-title">Navbar1</h1>
 
 			<nav class="navbar-menu">
 				<button
 					type="button"
 					class="navbar-burger-close"
 					onClick={toggleMenuOpen}
-				>
-					<CloseIcon
-						className="navbar-burger-icon"
-						color="white"
-						fontSize="large"
-					></CloseIcon>
-				</button>
-				<a type="button">Skills</a>
-				<a type="button" class="active">
+				></button>
+				<button type="button">Skills</button>
+				<button type="button" class="active">
 					Awards
-				</a>
-				<a type="button">Projects</a>
+				</button>
+				<button type="button">Projects</button>
 			</nav>
 		</nav>
 	);

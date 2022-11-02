@@ -9,7 +9,6 @@ function App() {
 	return (
 		<AppContextProvider>
 			<Navbar1></Navbar1>
-			<h1>test</h1>
 		</AppContextProvider>
 	);
 }
