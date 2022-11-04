@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #3b3d43;
-}
-
 button {
     border: 0;
     padding: 0;
@@ -47,17 +43,6 @@ button {
 body.open .navbar-overlay {
     visibility: visible;
     opacity: 1;
-}
-
-.navbar-burger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-    padding: 0;
 }
 
 .navbar-title {
