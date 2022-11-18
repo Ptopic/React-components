@@ -3,7 +3,6 @@ const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
 	const [state, setState] = useState(false);
-
 	return (
 		<AppContext.Provider
 			value={
